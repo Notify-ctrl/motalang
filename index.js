@@ -31,3 +31,5 @@ window.onresize = () => {
     div.setAttribute('style', 'display:flex');
   }
 };
+
+window.onresize()
