@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <script type='module' src='index.js'> </script>
+  <head>
+    <meta charset="UTF-8">
+    <title>Big5與GBK轉換</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+  </head>
+  <body>
+    <div class="centerDiv" id="warn">
+      本網頁是受魔塔亂碼啓發而隨便整了一個<br>
+      用途是通過繁體字生成類似亂碼的文字，如暗黑魔法師-穞堵臸猭畍<br>
+      無法轉換的文字直接懶得管<br>
+      <b>
+      <font color="lightblue">淺藍色</font>框表示輸入繁體字的情況下應當產生的簡體亂碼<br>
+      相應的，<font color="lightgreen">淺綠色</font>框表示輸入簡體亂碼的情況下應當還原出的繁體原文
+      </b>
+    </div> <br>
+    <div class="centerDiv">
+      <textarea type="text" id="input1" placeholder="請輸入內容"></textarea>
+    </div> <br>
+    <div class="centerDiv"style="display:flex">
+      <div class="halfDiv" id="big5out" style="background-color:lightblue"></div>
+      <div class="halfDiv" id="gbkout" style="background-color:lightgreen"></div>
+    </div>
+  </body>
+</html>
+
