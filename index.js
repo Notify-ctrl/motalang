@@ -19,3 +19,15 @@ document.getElementById("input1").oninput = () => {
   document.getElementById("big5out").textContent = getOutput(true);
   document.getElementById("gbkout").textContent = getOutput(false);
 }
+
+window.onresize = () => {
+  const oritentation = (window.innerWidth > window.innerHeight) ? "landscape":"portrait";
+  const div = document.getElementById("outdiv");
+
+  console.log(oritentation);
+  if(oritentation === 'portrait'){
+    div.setAttribute('style', 'display:default');
+  } else {
+    div.setAttribute('style', 'display:flex');
+  }
+};
