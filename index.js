@@ -1,9 +1,11 @@
 import str2gbk from './gbk.js';
 import str2big5 from './big5.js';
+import simp2trad from './simptradconv.js';
 
 function getOutput(fromBig5) {
-  const str = document.getElementById("input1").value;
-  let conv = '';
+  let str = document.getElementById("input1").value;
+  let conv = document.getElementById("convCheck").checked;
+  if (conv) str = simp2trad(str, true);
   if (fromBig5) {
     const buf = str2big5(str);
     conv = new TextDecoder('gbk').decode(buf);
@@ -24,7 +26,6 @@ window.onresize = () => {
   const oritentation = (window.innerWidth > window.innerHeight) ? "landscape":"portrait";
   const div = document.getElementById("outdiv");
 
-  console.log(oritentation);
   if(oritentation === 'portrait'){
     div.setAttribute('style', 'display:default');
   } else {
